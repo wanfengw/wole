@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "nav": "/pages/common/component/nav/nav"
+  },
+  "navigationStyle": "custom"
+}

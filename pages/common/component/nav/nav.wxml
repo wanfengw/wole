@@ -1,0 +1,40 @@
+<view class="nav">
+  <text class="fa fa-bars fa-2x" bindtap="showSide"></text>
+  <text>首页</text>
+  <text class="fa fa-home fa-2x"></text>
+</view>
+<view class="side" style="display:{{showSide}}">
+  <view class="sideHead">
+    <view class="logo">
+      <image src="/img/logoes/logo2.png" />
+      <text class="fa fa-times" bindtap="hideSide"></text>
+    </view>
+    <view class="deviceNum">
+      <view class="itemNum" wx:for="{{3}}" wx:key="{{index}}">
+        <text>12</text>
+        <text>总数</text>
+      </view>
+    </view>
+  </view>
+  <view class="index-bd">
+    <view class="kind-list">
+      <block wx:for-items="{{list}}" wx:key="{{index}}">
+        <view class="kind-list-item">
+          <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+            <view class="kind-list-text">{{item.id}}</view>
+          </view>
+          <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+              <block wx:for-items="{{5}}" wx:for-item="page" wx:key="*item">
+                <navigator url="pages/{{item.id}}/{{item.id}}" class="navigator">
+                  <view class="navigator-text">{{item.id}}</view>
+                  <view class="navigator-arrow"></view>
+                </navigator>
+              </block>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

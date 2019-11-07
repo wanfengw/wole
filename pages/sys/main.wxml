@@ -1,0 +1,19 @@
+<!-- <import src="../common/lib/header.wxml" />
+<view class="container">
+  <view style="padding-top:{{navbar}}px;width:100%;background:red">
+    <template is="head" data="{{title: '沃勒智能'}}" />
+  </view>
+</view> -->
+<view class="container">
+  <view class="head">
+    <view style="padding-top:{{navbar}}px;width:100%;background:aqua">
+      <view class="page-head">
+        <image class="logo" src='/img/logoes/logo3.png' />
+      </view>
+    </view>
+  </view>
+  <view class="content" style="padding-top: {{navbar}}px;">
+    <!-- <template is="nav"></template> -->
+    <nav></nav>
+  </view>
+</view>

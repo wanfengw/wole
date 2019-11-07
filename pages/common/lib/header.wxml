@@ -1,0 +1,6 @@
+<template name="head">
+  <view class="page-head">
+    <!-- <image src='/img/logoes/logo3.png' style=" width: 300rpx;height:40rpx;" /> -->
+    <view class="page-head-title">{{title}}</view>
+  </view>
+</template>
